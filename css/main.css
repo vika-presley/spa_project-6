@@ -27,47 +27,58 @@ body {
   background-size: cover; }
   .main .header {
     background: url("../images/header-bg.png"); }
-  .main .header__inner {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0 30px 0;
-    align-items: center; }
-  .main .menu {
-    width: 350px;
-    display: flex;
-    justify-content: space-between; }
-    .main .menu .menu__item {
-      text-decoration: none;
-      font-size: 13px;
-      color: #2c0526; }
-  .main .logo {
-    text-decoration: none;
-    font-size: 10px;
-    color: #430639;
-    text-transform: uppercase;
-    width: 150px;
-    text-align: center; }
-    .main .logo .logo__c-name_style {
-      font-size: 55px;
-      font-family: "Marguaritas", serif;
-      color: #430639;
-      text-transform: none; }
-  .main .header__logo {
-    position: relative;
-    right: 100px; }
+    .main .header .header__inner {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 0 30px 0;
+      align-items: center; }
+      .main .header .header__inner .menu {
+        width: 350px;
+        display: flex;
+        justify-content: space-between; }
+        .main .header .header__inner .menu .menu__item {
+          text-decoration: none;
+          font-size: 13px;
+          color: #2c0526;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 4px; }
+          .main .header .header__inner .menu .menu__item:hover {
+            font-family: "NunitoExtraBold", sans-serif;
+            color: #721163;
+            border-bottom: 1px solid #721163; }
+        .main .header .header__inner .menu .menu__item_active {
+          font-family: "NunitoExtraBold", sans-serif;
+          color: #721163;
+          border-bottom: 1px solid #721163; }
+      .main .header .header__inner .logo {
+        text-decoration: none;
+        font-size: 10px;
+        color: #430639;
+        text-transform: uppercase;
+        width: 150px;
+        text-align: center; }
+        .main .header .header__inner .logo .logo__c-name_style {
+          font-size: 55px;
+          font-family: "Marguaritas", serif;
+          color: #430639;
+          text-transform: none; }
+      .main .header .header__inner .header__logo {
+        position: relative;
+        right: 100px; }
+      .main .header .header__inner .phone {
+        font-size: 14px;
+        color: #2c0526; }
   .main .titles {
-    max-width: 1200px;
-    margin: 0 auto; }
+    max-width: 1200px; }
     .main .titles .titles__title {
+      font-family: "NunitoBold", sans-serif;
+      color: #430639;
+      margin: 0;
       font-size: 36px;
       width: 494px;
       line-height: 52px; }
-    .main .titles .block-title {
-      font-family: "NunitoBold", sans-serif;
-      color: #430639;
-      margin: 0; }
     .main .titles .titles__title_c-name {
       font-size: 70px;
       font-family: "Marguaritas", serif;
@@ -75,61 +86,372 @@ body {
       font-weight: normal; }
     .main .titles .titles__text {
       font-size: 20px;
-      font-family: "NunitoSemiBold", sans-serif;
       color: #2c0526;
       max-width: 470px;
       margin: 40px 0; }
     .main .titles .titles__btn {
+      background-color: #721163;
+      font-size: 16px;
+      color: white;
+      outline: 0;
+      border-radius: 25px;
+      border: 0;
       padding: 18px 36px; }
       .main .titles .titles__btn:hover {
         cursor: pointer;
         background-color: #df8ad2; }
-    .main .titles .btn {
+
+.main__titles {
+  padding: 168px 0 280px 0;
+  margin: 0 auto; }
+
+.about-us {
+  overflow: hidden; }
+  .about-us .our-features {
+    max-width: 1200px; }
+    .about-us .our-features .our-features__title {
+      font-family: "NunitoBold", sans-serif;
+      color: #430639;
+      margin: 0;
+      font-size: 30px;
+      margin-bottom: 65px;
+      position: relative; }
+      .about-us .our-features .our-features__title:before {
+        content: url("../images/bg-flowers/our-features-title-left.png");
+        position: absolute;
+        top: -137px;
+        left: -268px; }
+      .about-us .our-features .our-features__title:after {
+        content: url("../images/bg-flowers/our-features-title-right.png");
+        position: absolute;
+        top: -60px;
+        right: 0; }
+    .about-us .our-features .features {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative; }
+      .about-us .our-features .features:before {
+        content: url("../images/bg-flowers/features-left.png");
+        position: absolute;
+        top: 0;
+        left: -332px; }
+      .about-us .our-features .features:after {
+        content: url("../images/bg-flowers/features-right.png");
+        position: absolute;
+        bottom: 0;
+        right: -270px; }
+      .about-us .our-features .features .feature {
+        display: flex;
+        max-width: 426px; }
+        .about-us .our-features .features .feature .feature__img-wrap {
+          text-align: center;
+          width: 114px;
+          height: 93px; }
+          .about-us .our-features .features .feature .feature__img-wrap .feature__img {
+            position: relative;
+            top: -74px;
+            left: -1px; }
+        .about-us .our-features .features .feature .feature__text {
+          font-size: 14px;
+          font-family: "NunitoRegular", sans-serif;
+          color: #2c0526;
+          margin: 19px 0 0 25px; }
+      .about-us .our-features .features .features__content {
+        margin: 0 150px 45px 0; }
+        .about-us .our-features .features .features__content:nth-child(3) {
+          margin-left: 95px; }
+  .about-us .about-us__features {
+    margin: 0 auto;
+    padding: 150px 0 190px 0; }
+  .about-us .our-services {
+    max-width: 1200px; }
+    .about-us .our-services .our-services__title {
+      font-family: "NunitoBold", sans-serif;
+      color: #430639;
+      margin: 0;
+      font-size: 30px;
+      position: relative; }
+      .about-us .our-services .our-services__title:before {
+        content: url("../images/bg-flowers/our-services-title-left.png");
+        position: absolute;
+        bottom: -212px;
+        left: -440px; }
+      .about-us .our-services .our-services__title:after {
+        content: url("../images/bg-flowers/our-services-title-right.png");
+        position: absolute;
+        top: -35px;
+        right: -90px; }
+    .about-us .our-services .our-services__text {
+      margin: 31px 0 45px 0;
+      width: 575px;
+      font-size: 16px;
+      font-family: "NunitoRegular", sans-serif; }
+    .about-us .our-services .services {
+      display: flex;
+      justify-content: space-between;
+      position: relative; }
+      .about-us .our-services .services:before {
+        content: url("../images/bg-flowers/services-left.png");
+        position: absolute;
+        bottom: -40px;
+        left: -155px; }
+      .about-us .our-services .services:after {
+        content: url("../images/bg-flowers/services-right.png");
+        position: absolute;
+        bottom: -122px;
+        right: -319px; }
+      .about-us .our-services .services .service {
+        border-radius: 8px;
+        background-color: #faf7fa;
+        box-shadow: 0 2px 16.56px 1.44px rgba(44, 5, 38, 0.1);
+        width: 282px; }
+        .about-us .our-services .services .service .service__content {
+          padding: 26px 15px 30px 15px; }
+          .about-us .our-services .services .service .service__content .service__title {
+            font-size: 16px; }
+          .about-us .our-services .services .service .service__content .service__text {
+            font-size: 14px;
+            font-family: "NunitoRegular", sans-serif;
+            color: #2c0526;
+            margin: 17px 0 42px 0;
+            height: 95px; }
+          .about-us .our-services .services .service .service__content .service__time {
+            font-size: 12px;
+            color: #721163;
+            margin: 0 0 18px 0; }
+          .about-us .our-services .services .service .service__content .service__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            .about-us .our-services .services .service .service__content .service__details .service__price {
+              font-size: 16px;
+              font-family: "NunitoBold", sans-serif;
+              color: #2c0526; }
+            .about-us .our-services .services .service .service__content .service__details .service__btn {
+              background-color: #721163;
+              font-size: 16px;
+              color: white;
+              outline: 0;
+              border-radius: 25px;
+              border: 0;
+              height: 40px;
+              padding: 0 23px; }
+              .about-us .our-services .services .service .service__content .service__details .service__btn:hover {
+                cursor: pointer;
+                background-color: #df8ad2; }
+  .about-us .about-us__services {
+    margin: 0 auto;
+    padding-bottom: 115px; }
+
+.promotion {
+  background: no-repeat center url("../images/promotion-bg.png");
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1; }
+  .promotion .promotion__inner {
+    padding: 170px 0 210px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1; }
+    .promotion .promotion__inner .promotion__title {
+      font-family: "NunitoBold", sans-serif;
+      color: #430639;
+      margin: 0;
+      font-size: 30px;
+      position: relative;
+      z-index: 10; }
+      .promotion .promotion__inner .promotion__title:after {
+        content: url("../images/bg-flowers/promotion-title-left.png");
+        position: absolute;
+        top: -86px;
+        left: -280px;
+        z-index: 10; }
+      .promotion .promotion__inner .promotion__title:before {
+        content: url("../images/promotion-big-circle.png");
+        position: absolute;
+        top: -175px;
+        left: -315px;
+        z-index: 5; }
+    .promotion .promotion__inner .promotion__text {
+      font-size: 18px;
+      color: #2c0526;
+      margin: 30px 0;
+      width: 354px;
+      position: relative;
+      z-index: 10; }
+      .promotion .promotion__inner .promotion__text:after {
+        content: url("../images/bg-flowers/promotion-text-left.png");
+        position: absolute;
+        bottom: -183px;
+        left: -348px;
+        z-index: 10; }
+      .promotion .promotion__inner .promotion__text:before {
+        content: url("../images/promotion-small-circle.png");
+        position: absolute;
+        top: -240px;
+        left: -380px;
+        z-index: 5; }
+    .promotion .promotion__inner .promotion__button {
       background-color: #721163;
       font-size: 16px;
-      font-family: "NunitoSemiBold", sans-serif;
       color: white;
       outline: 0;
       border-radius: 25px;
-      border: 0; }
-  .main .main__titles {
-    padding: 168px 0 280px 0; }
+      border: 0;
+      padding: 17px 40px;
+      z-index: 10;
+      position: relative; }
+      .promotion .promotion__inner .promotion__button:hover {
+        cursor: pointer;
+        background-color: #df8ad2; }
 
-.features-wrap {
+.info__staff {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 150px 0 190px 0; }
-  .features-wrap .features-wrap__title {
-    font-size: 30px;
-    margin: 0 0 65px 0; }
-  .features-wrap .features {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative; }
-    .features-wrap .features:before {
-      content: url("../images/about-us-bg1.png");
-      position: absolute;
-      top: -129px;
-      right: -70px; }
-    .features-wrap .features .feature {
-      display: flex;
-      max-width: 426px; }
-      .features-wrap .features .feature .feature__img-wrap {
-        text-align: center;
-        width: 114px;
-        height: 93px; }
-        .features-wrap .features .feature .feature__img-wrap .feature__img {
-          position: relative;
-          top: -75px; }
-      .features-wrap .features .feature .feature__text {
+  padding: 135px 0 155px 0;
+  margin: 0 auto; }
+
+.staff .staff__title {
+  font-family: "NunitoBold", sans-serif;
+  color: #430639;
+  margin: 0;
+  font-size: 30px; }
+
+.staff .staff__text {
+  max-width: 517px;
+  margin: 30px 0 45px 0;
+  font-size: 16px;
+  font-family: "NunitoRegular", sans-serif;
+  color: #2c0526; }
+
+.staff .staff-carousel {
+  position: relative; }
+  .staff .staff-carousel .staff-carousel__content {
+    height: 311px;
+    overflow: hidden; }
+    .staff .staff-carousel .staff-carousel__content .staff-carousel__img {
+      position: relative; }
+    .staff .staff-carousel .staff-carousel__content .staff-carousel__text {
+      position: relative;
+      top: -90px;
+      background-color: rgba(255, 255, 255, 0.75);
+      width: 251px;
+      padding: 10px 0 10px 20px;
+      box-sizing: border-box; }
+      .staff .staff-carousel .staff-carousel__content .staff-carousel__text .staff-carousel__title {
+        font-size: 18px;
+        font-family: "NunitoBold", sans-serif;
+        color: #2c0526;
+        margin: 0; }
+      .staff .staff-carousel .staff-carousel__content .staff-carousel__text .staff-carousel__exp {
         font-size: 14px;
         font-family: "NunitoRegular", sans-serif;
         color: #2c0526;
-        margin: 19px 0 0 25px; }
-    .features-wrap .features .features__content {
-      margin: 0 150px 45px 0; }
-      .features-wrap .features .features__content:nth-child(3) {
-        margin-left: 95px; }
+        margin: 10px 0 0 0; }
+
+.info__gallery {
+  padding-bottom: 190px;
+  position: relative; }
+  .info__gallery .gallery__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .info__gallery .gallery__inner .gallery__title {
+      font-family: "NunitoBold", sans-serif;
+      color: #430639;
+      margin: 0;
+      font-size: 30px;
+      margin: 0; }
+    .info__gallery .gallery__inner .gallery__text {
+      width: 685px;
+      font-size: 16px;
+      font-family: "NunitoRegular", sans-serif;
+      color: #2c0526;
+      margin: 30px 0 50px 0; }
+  .info__gallery .gallery-carousel {
+    position: relative; }
+    .info__gallery .gallery-carousel .gallery-carousel__img {
+      width: 385px;
+      height: 295px; }
+  .info__gallery .gallery-arrows {
+    position: relative;
+    width: 304px;
+    margin: 0 auto; }
+    .info__gallery .gallery-arrows .gallery-arrows__prev {
+      position: absolute;
+      bottom: 1px;
+      left: -13px; }
+      .info__gallery .gallery-arrows .gallery-arrows__prev:hover {
+        cursor: pointer; }
+    .info__gallery .gallery-arrows .gallery-arrows__next {
+      position: absolute;
+      bottom: 1px;
+      right: -13px; }
+      .info__gallery .gallery-arrows .gallery-arrows__next:hover {
+        cursor: pointer; }
+
+.staff-carousel .slick-slide {
+  padding-bottom: 35px; }
+
+.staff-carousel .slick-prev:before {
+  content: url("../images/carousel-prev-arrow.png");
+  position: absolute;
+  bottom: -185px;
+  left: 567px;
+  z-index: 5; }
+
+.staff-carousel .slick-next:before {
+  content: url("../images/carousel-next-arrow.png");
+  position: absolute;
+  bottom: -185px;
+  right: 594px;
+  z-index: 5; }
+
+.staff-carousel .slick-dots {
+  position: relative;
+  top: 13px;
+  left: 555px;
+  z-index: 1;
+  width: 60px;
+  margin: 0; }
+
+.staff-carousel .slick-active a.dot {
+  font-size: 18px;
+  font-family: "NunitoBold", sans-serif;
+  color: #721163; }
+
+.staff-carousel a.dot {
+  font-size: 18px;
+  font-family: "NunitoRegular", sans-serif;
+  color: rgba(114, 17, 99, 0.702); }
+
+.info__gallery .gallery-carousel .slick-slide {
+  margin: 0 12px 48px 12px;
+  text-align: center; }
+
+.info__gallery .gallery-carousel .slick-slide img {
+  max-width: 100%; }
+
+.info__gallery .gallery-carousel .gallery-carousel__img.slick-slide {
+  opacity: 0.6; }
+
+.info__gallery .gallery-carousel .gallery-carousel__img.slick-slide.slick-active {
+  opacity: 1; }
+
+.info__gallery .gallery-carousel .slick-dots li button:before {
+  width: 17px;
+  height: 17px;
+  content: "";
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid #721163;
+  text-align: center;
+  opacity: .8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.info__gallery .gallery-carousel .slick-dots li.slick-active button:before {
+  background-color: #721163; }
 
 /*# sourceMappingURL=main.css.map */

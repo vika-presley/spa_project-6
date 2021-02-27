@@ -30,7 +30,13 @@ body {
 
 $main-color: rgb(67, 6, 57);
 $text-color: rgb(44, 5, 38);
-$btn-hover: rgb(223,138,210);
+$btn-hover: rgb(223, 138, 210);
+
+@mixin menu-active {
+  font-family: "NunitoExtraBold", sans-serif;
+  color: rgb(114, 17, 99);
+  border-bottom: 1px solid rgb(114, 17, 99);
+}
 
 @mixin title {
   font-family: "NunitoBold", sans-serif;
@@ -41,11 +47,14 @@ $btn-hover: rgb(223,138,210);
 @mixin btn {
   background-color: rgb(114, 17, 99);
   font-size: 16px;
-  font-family: "NunitoSemiBold", sans-serif;
   color: rgb(255, 255, 255);
   outline: 0;
   border-radius: 25px;
-  border: 0
+  border: 0;
+  &:hover {
+    cursor: pointer;
+    background-color: $btn-hover;
+  }
 }
 
 
@@ -55,65 +64,81 @@ $btn-hover: rgb(223,138,210);
 
   .header {
     background: url("../images/header-bg.png");
-  }
 
-  .header__inner {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0 30px 0;
-    align-items: center;
 
-  }
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 0 30px 0;
+      align-items: center;
 
-  .menu {
-    width: 350px;
-    display: flex;
-    justify-content: space-between;
 
-    .menu__item {
-      text-decoration: none;
-      font-size: 13px;
-      color: $text-color;
+      .menu {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+
+        .menu__item {
+          text-decoration: none;
+          font-size: 13px;
+          color: $text-color;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 4px;
+
+          &:hover {
+            @include menu-active;
+          }
+
+        }
+
+        .menu__item_active {
+          @include menu-active();
+        }
+      }
+
+
+      .logo {
+        text-decoration: none;
+        font-size: 10px;
+        color: $main-color;
+        text-transform: uppercase;
+        width: 150px;
+        text-align: center;
+
+        .logo__c-name_style {
+          font-size: 55px;
+          font-family: "Marguaritas", serif;
+          color: $main-color;
+          text-transform: none;
+        }
+
+      }
+
+      .header__logo {
+        position: relative;
+        right: 100px;
+      }
+
+      .phone {
+        font-size: 14px;
+        color: $text-color;
+      }
 
     }
   }
 
-  .logo {
-    text-decoration: none;
-    font-size: 10px;
-    color: $main-color;
-    text-transform: uppercase;
-    width: 150px;
-    text-align: center;
-
-    .logo__c-name_style {
-      font-size: 55px;
-      font-family: "Marguaritas", serif;
-      color: $main-color;
-      text-transform: none;
-    }
-
-  }
-
-  .header__logo {
-    position: relative;
-    right: 100px;
-  }
 
   .titles {
     max-width: 1200px;
-    margin: 0 auto;
+
 
     .titles__title {
+      @include title();
       font-size: 36px;
       width: 494px;
       line-height: 52px;
-    }
-
-    .block-title {
-      @include title();
     }
 
     .titles__title_c-name {
@@ -126,86 +151,420 @@ $btn-hover: rgb(223,138,210);
 
     .titles__text {
       font-size: 20px;
-      font-family: "NunitoSemiBold", sans-serif;
       color: $text-color;
       max-width: 470px;
       margin: 40px 0;
     }
 
     .titles__btn {
-      padding: 18px 36px;
-      &:hover{
-        cursor: pointer;
-        background-color: $btn-hover;
-      }
-    }
-
-    .btn {
       @include btn();
-    }
-  }
+      padding: 18px 36px;
 
-  .main__titles {
-    padding: 168px 0 280px 0;
+    }
+
   }
 }
 
-.features-wrap {
-  max-width: 1200px;
+.main__titles {
+  padding: 168px 0 280px 0;
   margin: 0 auto;
-  padding: 150px 0 190px 0;
+}
 
-  .features-wrap__title {
-    font-size: 30px;
-    margin: 0 0 65px 0;
-  }
 
-  .features {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    &:before{
-      content: url("../images/about-us-bg1.png");
-      position: absolute;
-      top:-129px;
-      right: -70px;
+.about-us {
+  overflow: hidden;
+
+  .our-features {
+    max-width: 1200px;
+
+    .our-features__title {
+      @include title();
+      font-size: 30px;
+      margin-bottom: 65px;
+      position: relative;
+
+      &:before {
+        content: url("../images/bg-flowers/our-features-title-left.png");
+        position: absolute;
+        top: -137px;
+        left: -268px;
+      }
+
+      &:after {
+        content: url("../images/bg-flowers/our-features-title-right.png");
+        position: absolute;
+        top: -60px;
+        right: 0;
+      }
+
     }
 
-    .feature {
+    .features {
       display: flex;
-      max-width: 426px;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
 
-      .feature__img-wrap {
-        text-align: center;
-        width: 114px;
-        height: 93px;
+      &:before {
+        content: url("../images/bg-flowers/features-left.png");
+        position: absolute;
+        top: 0;
+        left: -332px;
+      }
 
-        .feature__img {
-          position: relative;
-          top: -75px;
+      &:after {
+        content: url("../images/bg-flowers/features-right.png");
+        position: absolute;
+        bottom: 0;
+        right: -270px;
+      }
+
+
+      .feature {
+        display: flex;
+        max-width: 426px;
+
+        .feature__img-wrap {
+          text-align: center;
+          width: 114px;
+          height: 93px;
+
+          .feature__img {
+            position: relative;
+            top: -74px;
+            left: -1px;
+          }
+        }
+
+        .feature__text {
+          font-size: 14px;
+          font-family: "NunitoRegular", sans-serif;
+          color: $text-color;
+          margin: 19px 0 0 25px;
         }
       }
 
-      .feature__text {
-        font-size: 14px;
-        font-family: "NunitoRegular", sans-serif;
-        color: $text-color;
-        margin: 19px 0 0 25px;
+
+      .features__content {
+        margin: 0 150px 45px 0;
+
+        &:nth-child(3) {
+          margin-left: 95px;
+        }
       }
     }
 
+  }
 
-    .features__content {
-      margin: 0 150px 45px 0;
+  .about-us__features {
+    margin: 0 auto;
+    padding: 150px 0 190px 0;
 
-      &:nth-child(3) {
-        margin-left: 95px;
+  }
+
+  .our-services {
+    max-width: 1200px;
+
+
+    .our-services__title {
+      @include title();
+      font-size: 30px;
+      position: relative;
+
+      &:before {
+        content: url("../images/bg-flowers/our-services-title-left.png");
+        position: absolute;
+        bottom: -212px;
+        left: -440px;
+      }
+
+      &:after {
+        content: url("../images/bg-flowers/our-services-title-right.png");
+        position: absolute;
+        top: -35px;
+        right: -90px;
+      }
+    }
+
+    .our-services__text {
+      margin: 31px 0 45px 0;
+      width: 575px;
+      font-size: 16px;
+      font-family: "NunitoRegular", sans-serif;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      &:before {
+        content: url("../images/bg-flowers/services-left.png");
+        position: absolute;
+        bottom: -40px;
+        left: -155px;
+      }
+
+      &:after {
+        content: url("../images/bg-flowers/services-right.png");
+        position: absolute;
+        bottom: -122px;
+        right: -319px;
+      }
+
+      .service {
+        border-radius: 8px;
+        background-color: rgb(250, 247, 250);
+        box-shadow: 0 2px 16.56px 1.44px rgba(44, 5, 38, 0.1);
+        width: 282px;
+
+        .service__content {
+          padding: 26px 15px 30px 15px;
+
+          .service__title {
+            font-size: 16px;
+          }
+
+          .service__text {
+            font-size: 14px;
+            font-family: "NunitoRegular", sans-serif;
+            color: $text-color;
+            margin: 17px 0 42px 0;
+            height: 95px;
+          }
+
+          .service__time {
+            font-size: 12px;
+            color: rgb(114, 17, 99);
+            margin: 0 0 18px 0;
+          }
+
+          .service__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .service__price {
+              font-size: 16px;
+              font-family: "NunitoBold", sans-serif;
+              color: $text-color;
+            }
+
+            .service__btn {
+              @include btn();
+              height: 40px;
+              padding: 0 23px;
+            }
+          }
+
+        }
       }
     }
   }
 
+  .about-us__services {
+    margin: 0 auto;
+    padding-bottom: 115px;
+  }
 }
+
+.promotion {
+  background: no-repeat center url("../images/promotion-bg.png");
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+
+  .promotion__inner {
+    padding: 170px 0 210px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+
+    .promotion__title {
+      @include title();
+      font-size: 30px;
+      position: relative;
+      z-index: 10;
+
+      &:after {
+        content: url("../images/bg-flowers/promotion-title-left.png");
+        position: absolute;
+        top: -86px;
+        left: -280px;
+        z-index: 10;
+      }
+
+      &:before {
+        content: url("../images/promotion-big-circle.png");
+        position: absolute;
+        top: -175px;
+        left: -315px;
+        z-index: 5;
+      }
+    }
+
+    .promotion__text {
+      font-size: 18px;
+      color: $text-color;
+      margin: 30px 0;
+      width: 354px;
+      position: relative;
+      z-index: 10;
+
+      &:after {
+        content: url("../images/bg-flowers/promotion-text-left.png");
+        position: absolute;
+        bottom: -183px;
+        left: -348px;
+        z-index: 10;
+      }
+
+      &:before {
+        content: url("../images/promotion-small-circle.png");
+        position: absolute;
+        top: -240px;
+        left: -380px;
+        z-index: 5;
+      }
+    }
+
+    .promotion__button {
+      @include btn();
+      padding: 17px 40px;
+      z-index: 10;
+      position: relative;
+    }
+  }
+}
+
+.info__staff {
+  max-width: 1200px;
+  padding: 135px 0 155px 0;
+  margin: 0 auto;
+
+}
+
+.staff {
+  .staff__title {
+    @include title();
+    font-size: 30px;
+  }
+
+  .staff__text {
+    max-width: 517px;
+    margin: 30px 0 45px 0;
+    font-size: 16px;
+    font-family: "NunitoRegular", sans-serif;
+    color: $text-color;
+  }
+
+  .staff-carousel {
+    position: relative;
+
+    .staff-carousel__content {
+      height: 311px;
+      overflow: hidden;
+
+      .staff-carousel__img {
+        position: relative;
+      }
+
+      .staff-carousel__text {
+        position: relative;
+        top: -90px;
+        background-color: rgba(255, 255, 255, 0.75);
+        width: 251px;
+        padding: 10px 0 10px 20px;
+        box-sizing: border-box;
+
+        .staff-carousel__title {
+          font-size: 18px;
+          font-family: "NunitoBold", sans-serif;
+          color: $text-color;
+          margin: 0;
+        }
+
+        .staff-carousel__exp {
+          font-size: 14px;
+          font-family: "NunitoRegular", sans-serif;
+          color: $text-color;
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+.info__gallery {
+  padding-bottom: 190px;
+  position: relative;
+
+  .gallery__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .gallery__title {
+      @include title();
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .gallery__text {
+      width: 685px;
+      font-size: 16px;
+      font-family: "NunitoRegular", sans-serif;
+      color: $text-color;
+      margin: 30px 0 50px 0;
+    }
+  }
+
+  .gallery-carousel {
+    position: relative;
+
+    .gallery-carousel__img {
+      width: 385px;
+      height: 295px;
+    }
+  }
+
+
+  .gallery-arrows {
+    position: relative;
+    width: 304px;
+    margin: 0 auto;
+
+    .gallery-arrows__prev {
+      position: absolute;
+      bottom: 1px;
+      left: -13px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .gallery-arrows__next {
+      position: absolute;
+      bottom: 1px;
+      right: -13px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+
+}
+
+
+@import "carousel-settings";
+
+
+
 
 
 
