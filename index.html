@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>White Lotus</title>
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -231,17 +233,46 @@
             </p>
         </div>
         <div class="gallery-carousel">
-
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img2.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img3.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img4.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img5.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img6.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img7.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img8.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img9.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img10.png" alt="">
-            <img class="gallery-carousel__img" src="images/gallery-carousel-img1.png" alt="">
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img2.png" data-fancybox="gallery"
+               data-caption="Caption #1">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img2.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img3.png" data-fancybox="gallery"
+               data-caption="Caption #2">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img3.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img4.png" data-fancybox="gallery"
+               data-caption="Caption #3">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img4.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img5.png" data-fancybox="gallery"
+               data-caption="Caption #4">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img5.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img6.png" data-fancybox="gallery"
+               data-caption="Caption #5">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img6.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img7.png" data-fancybox="gallery"
+               data-caption="Caption #6">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img7.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img8.png" data-fancybox="gallery"
+               data-caption="Caption #7">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img8.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img9.png" data-fancybox="gallery"
+               data-caption="Caption #8">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img9.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img10.png" data-fancybox="gallery"
+               data-caption="Caption #9">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img10.png" alt="">
+            </a>
+            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel-img1.png" data-fancybox="gallery"
+               data-caption="Caption #10">
+                <img class="gallery-carousel__img" src="images/gallery-carousel-img1.png" alt="">
+            </a>
 
         </div>
         <div class="gallery-arrows">
@@ -252,10 +283,95 @@
     </div>
 
 </div>
+<div class="faq">
+
+    <div class="faq__inner">
+        <h2 class="faq__title">Часто задаваемые вопросы</h2>
+        <div class="faq__content">
+            <div class="accordion faq__accordion">
+
+                <h3 class="accordion__title">Как я могу записаться на процедуру?</h3>
+                <div>
+                    <p class="accordion__text">Вы можете записаться на процедуру онлайн прямо на нашем сайте. Также вы
+                        можете
+                        позвонить нам по телефону
+                        <span class="accordion__text_phone">+7 (981) 458-85-96</span> или прямо на сайте заказать
+                        обратный
+                        звонок и мы перезвоним вам.</p>
+                </div>
+                <h3 class="accordion__title">Нужно ли предварительно записываться на процедуры?</h3>
+                <div>
+                    <p class="accordion__text">Просим Вас предварительно записываться только, если Вы уверены, что
+                        сможете
+                        прийти на услугу. Если же Вы не уверены, то можно попросить администратора перезвонить Вам позже
+                        и
+                        согласовать время и дату посещения салона. </p>
+                </div>
+                <h3 class="accordion__title">Какие противопоказания есть для массажей?</h3>
+                <div>
+                    <p class="accordion__text">С полным списком противопоказаний Вас может ознакомить наш админинстратор
+                        по
+                        номеру <span class="accordion__text_phone">+7 (981) 458-85-96</span> или при личном посещении
+                        салона.
+                        К основным противопоказаниям для массажа можно отнести:
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list-content">Любые опухоли различной локализации</li>
+                        <li class="accordion__list-content">Острая сердечнососудистая недостаточность</li>
+                        <li class="accordion__list-content">Общие тяжёлые состояния при различных заболеваниях и травмах</li>
+                    </ul>
+                </div>
+                <h3 class="accordion__title">Что нужно брать с собой для массажа?</h3>
+                <div>
+                    <p class="accordion__text">Для комфортного пребывания в SPA-салоне в течение нескольких часов или
+                        более
+                        длительного времени Вам понадобятся определенные вещи, которые обычно предоставляют клиентам на
+                        месте:
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list-content">Полотенце</li>
+                        <li class="accordion__list-content">Одноразовые тапочки и шапочка</li>
+                        <li class="accordion__list-content">Предметы личной гигиены (также одноразовые)</li>
+                    </ul>
+                    <p class="accordion__text">Планируя поход в салон, следует заранее уточнить у администратора,
+                        выдадут ли
+                        Вам
+                        перед процедурами все
+                        перечисленное выше.
+                    </p>
+                </div>
+                <h3 class="accordion__title">Могу я провести в вашем салоне девичник?</h3>
+                <div>
+                    <p class="accordion__text">Конечно! Самый лучший способ провести девичник – это собраться всем
+                        вместе в
+                        салоне красоты. Хорошее настроение, мастера – профессионалы и Вам вечер с подругами запомнится
+                        на
+                        долго.</p>
+                    <p class="accordion__text">Пожалуйста, свяжитесь с нами по номеру <span
+                            class="accordion__text_phone">+7 (981) 458-85-96</span>,
+                        чтобы мы помогли Вам организовать девичник</p>
+                </div>
+            </div>
+            <div class="faq-form faq__form">
+                <p class="faq-form__text">Если вы не нашли здесь ответа на свой вопрос, то вы можете позвонить нам по
+                    телефону
+                    <span class="faq-form__text_phone">+7 (981) 458 85 96</span> и мы
+                    с радостью вас проконсультируем! Или просто закажите обратный звонок и мы сами вам перезвоним!</p>
+                <form class="faq-form__form-content" action="post">
+                    <input class="form-input faq-form__input" type="text" placeholder="Ваш номер телефона">
+                    <button class="faq-form__button">Позвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/slick.min.js"></script>
+<script src="js/jquery/jquery-3.5.1.min.js"></script>
+<script src="js/jquery/slick.min.js"></script>
+<script src="js/jquery/jquery.fancybox.min.js"></script>
+<script src="js/jquery/jquery-ui.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

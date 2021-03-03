@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "url-regex-safe": "^2.0.2"
   },
   "devDependencies": {
     "gulp-sass": "^4.1.0",

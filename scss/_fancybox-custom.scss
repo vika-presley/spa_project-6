@@ -1,0 +1,21 @@
+
+.fancybox-caption__body{
+  display: none;
+}
+
+.fancybox-is-open .fancybox-bg{
+  opacity: 0.96;
+}
+
+.fancybox-bg{
+  background: rgba(32, 4, 28, 0.8);
+}
+
+.fancybox-button{
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+.fancybox-can-zoomIn .fancybox-content {
+  cursor: default;
+}

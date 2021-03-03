@@ -1,0 +1,67 @@
+.ui-state-active {
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.ui-icon {
+  background-image: url("../images/accordion-arrow.png");
+  position: absolute;
+  right: 32px;
+  top: 40px;
+  width: 22px;
+}
+
+.ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
+  background-position: unset;
+}
+
+.ui-state-hover .ui-icon {
+  background-image: url("../images/accordion-arrow.png");
+}
+
+.ui-state-active .ui-icon {
+  background-image: url("../images/accordion-arrow.png");
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 30px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 12px 11.2px -1px rgba(67, 6, 57, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.ui-accordion-header-active:after {
+  content: url("../images/accordion-title--bottom-line.png");
+  position: absolute;
+  bottom: -6px;
+  left: 30px;
+}
+
+.ui-widget-content{
+  border: none;
+}
+
+.ui-state-default{
+  border: none;
+  background-color: #faf7fa;
+}
+
+.accordion .ui-accordion-header-collapsed{
+  border-radius: 8px;
+}
+
+.accordion .ui-accordion-header-active{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.faq .faq__inner .faq__content .accordion .accordion__title:first-child{
+  margin-top: 0;
+}

@@ -1,10 +1,6 @@
 
 .staff-carousel {
 
-  .slick-slide {
-    padding-bottom: 35px;
-  }
-
   .slick-prev:before {
     content: url("../images/carousel-prev-arrow.png");
     position: absolute;
@@ -24,7 +20,7 @@
 
   .slick-dots {
     position: relative;
-    top: 13px;
+    top: 30px;
     left: 555px;
     z-index: 1;
     width: 60px;
@@ -47,20 +43,31 @@
 
 .info__gallery .gallery-carousel{
 
+  .slick-list.draggable{
+    padding: 10px 50px!important;
+  }
+
   .slick-slide{
     margin : 0 12px 48px 12px;
     text-align: center;
+    &:focus{
+      outline: none;
+    }
   }
 
   .slick-slide img{
     max-width: 100%;
   }
-
-  .gallery-carousel__img.slick-slide{
-    opacity: 0.6;
+  .slick-slide .gallery-carousel__img{
+    opacity: 0.5;
   }
-  .gallery-carousel__img.slick-slide.slick-active{
+
+  .slick-slide.slick-active .gallery-carousel__img{
     opacity: 1;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      transform: scale(1.05);
+    }
   }
 
   .slick-dots li button:before {
@@ -79,4 +86,3 @@
     background-color: #721163;;
   }
 }
-

@@ -309,14 +309,25 @@ body {
 
 .info__staff {
   max-width: 1200px;
-  padding: 135px 0 155px 0;
+  padding-top: 135px;
   margin: 0 auto; }
 
 .staff .staff__title {
   font-family: "NunitoBold", sans-serif;
   color: #430639;
   margin: 0;
-  font-size: 30px; }
+  font-size: 30px;
+  position: relative; }
+  .staff .staff__title:before {
+    content: url("../images/bg-flowers/staff-title-right.png");
+    position: absolute;
+    top: -5px;
+    right: 5px; }
+  .staff .staff__title:after {
+    content: url("../images/bg-flowers/staff-title-top.png");
+    position: absolute;
+    top: -140px;
+    right: 231px; }
 
 .staff .staff__text {
   max-width: 517px;
@@ -327,11 +338,26 @@ body {
 
 .staff .staff-carousel {
   position: relative; }
+  .staff .staff-carousel:before {
+    position: absolute;
+    content: url("../images/bg-flowers/staff-carousel-right-middle.png");
+    top: 75px;
+    right: -115px; }
+  .staff .staff-carousel:after {
+    position: absolute;
+    content: url("../images/bg-flowers/staff-carousel-right-bottom.png");
+    bottom: -35px;
+    right: -39px;
+    z-index: -1; }
   .staff .staff-carousel .staff-carousel__content {
     height: 311px;
     overflow: hidden; }
+    .staff .staff-carousel .staff-carousel__content:focus {
+      outline: none; }
     .staff .staff-carousel .staff-carousel__content .staff-carousel__img {
       position: relative; }
+      .staff .staff-carousel .staff-carousel__content .staff-carousel__img:focus {
+        outline: none; }
     .staff .staff-carousel .staff-carousel__content .staff-carousel__text {
       position: relative;
       top: -90px;
@@ -351,18 +377,30 @@ body {
         margin: 10px 0 0 0; }
 
 .info__gallery {
-  padding-bottom: 190px;
-  position: relative; }
+  padding: 155px 0 190px 0;
+  position: relative;
+  overflow: hidden; }
   .info__gallery .gallery__inner {
     max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden; }
+    margin: 0 auto; }
     .info__gallery .gallery__inner .gallery__title {
       font-family: "NunitoBold", sans-serif;
       color: #430639;
       margin: 0;
       font-size: 30px;
-      margin: 0; }
+      margin: 0;
+      position: relative; }
+      .info__gallery .gallery__inner .gallery__title:before {
+        position: absolute;
+        content: url("../images/bg-flowers/gallery-title-big-right.png");
+        top: -180px;
+        right: -190px; }
+      .info__gallery .gallery__inner .gallery__title:after {
+        position: absolute;
+        content: url("../images/bg-flowers/gallery-title-small-right.png");
+        bottom: -140px;
+        right: -345px;
+        z-index: -1; }
     .info__gallery .gallery__inner .gallery__text {
       width: 685px;
       font-size: 16px;
@@ -378,6 +416,17 @@ body {
     position: relative;
     width: 304px;
     margin: 0 auto; }
+    .info__gallery .gallery-arrows:before {
+      position: absolute;
+      content: url("../images/bg-flowers/gallery-arrows-left.png");
+      bottom: -60px;
+      left: -630px; }
+    .info__gallery .gallery-arrows:after {
+      position: absolute;
+      content: url("../images/bg-flowers/gallery-arrows-right.png");
+      bottom: -50px;
+      right: -395px;
+      z-index: -1; }
     .info__gallery .gallery-arrows .gallery-arrows__prev {
       position: absolute;
       bottom: 1px;
@@ -391,8 +440,176 @@ body {
       .info__gallery .gallery-arrows .gallery-arrows__next:hover {
         cursor: pointer; }
 
-.staff-carousel .slick-slide {
-  padding-bottom: 35px; }
+.faq {
+  background: no-repeat center url("../images/faq-bg-img.png");
+  background-size: cover; }
+  .faq .faq__title {
+    font-family: "NunitoBold", sans-serif;
+    color: #430639;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 50px; }
+  .faq .faq__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 0; }
+    .faq .faq__inner .faq__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; }
+      .faq .faq__inner .faq__content .accordion {
+        width: 715px; }
+        .faq .faq__inner .faq__content .accordion .accordion__title {
+          font-size: 18px;
+          font-family: "NunitoBold", sans-serif;
+          color: #2c0526;
+          margin-top: 20px;
+          padding: 30px;
+          position: relative;
+          box-shadow: 0 2px 9.2px 0.8px rgba(67, 6, 57, 0.12); }
+          .faq .faq__inner .faq__content .accordion .accordion__title:focus {
+            outline: none; }
+        .faq .faq__inner .faq__content .accordion .accordion__text_phone {
+          font-family: "NunitoBold", sans-serif;
+          color: #721163; }
+        .faq .faq__inner .faq__content .accordion .accordion__text {
+          margin: 0;
+          color: #2c0526;
+          font-size: 14px;
+          font-family: "NunitoRegular", sans-serif;
+          max-width: 570px; }
+        .faq .faq__inner .faq__content .accordion .accordion__list {
+          padding: 0 0 0 30px;
+          list-style-type: circle;
+          padding-inline-start: 18px;
+          margin: 10px 0; }
+          .faq .faq__inner .faq__content .accordion .accordion__list .accordion__list-content {
+            font-size: 14px;
+            font-family: "NunitoRegular", sans-serif;
+            color: #2c0526; }
+      .faq .faq__inner .faq__content .faq-form {
+        width: 465px;
+        border-radius: 8px;
+        background-color: #faf7fa;
+        box-shadow: 0 2px 9.2px 0.8px rgba(67, 6, 57, 0.12);
+        padding: 30px 37px;
+        box-sizing: border-box; }
+        .faq .faq__inner .faq__content .faq-form .faq-form__text {
+          font-size: 18px;
+          font-family: "NunitoRegular", sans-serif;
+          color: #2c0526;
+          text-align: center;
+          width: 400px;
+          margin: 0 auto; }
+        .faq .faq__inner .faq__content .faq-form .faq-form__text_phone {
+          font-family: "NunitoBold", sans-serif;
+          color: #721163; }
+        .faq .faq__inner .faq__content .faq-form .faq-form__form-content {
+          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px; }
+          .faq .faq__inner .faq__content .faq-form .faq-form__form-content .form-input {
+            border-width: 1px;
+            border-color: #721163;
+            border-style: solid;
+            background-color: #f5eff3;
+            border-radius: 25px;
+            color: #2c0526; }
+            .faq .faq__inner .faq__content .faq-form .faq-form__form-content .form-input:focus {
+              outline: none; }
+            .faq .faq__inner .faq__content .faq-form .faq-form__form-content .form-input::placeholder {
+              font-size: 14px;
+              color: #721163;
+              font-family: "NunitoSemiBold", sans-serif; }
+          .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__input {
+            padding: 14px 101px 14px 30px;
+            margin-bottom: 15px; }
+          .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__button {
+            background-color: #721163;
+            font-size: 16px;
+            color: white;
+            outline: 0;
+            border-radius: 25px;
+            border: 0;
+            padding: 14px 90px;
+            font-size: 16px; }
+            .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__button:hover {
+              cursor: pointer;
+              background-color: #df8ad2; }
+
+.ui-state-active {
+  background-color: white;
+  border: none; }
+
+.ui-icon {
+  background-image: url("../images/accordion-arrow.png");
+  position: absolute;
+  right: 32px;
+  top: 40px;
+  width: 22px; }
+
+.ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
+  background-position: unset; }
+
+.ui-state-hover .ui-icon {
+  background-image: url("../images/accordion-arrow.png"); }
+
+.ui-state-active .ui-icon {
+  background-image: url("../images/accordion-arrow.png");
+  transition: all 0.3s linear;
+  transform: rotate(180deg); }
+
+.ui-accordion .ui-accordion-content {
+  padding: 30px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 12px 11.2px -1px rgba(67, 6, 57, 0.1);
+  position: relative;
+  z-index: 1; }
+
+.ui-accordion-header-active:after {
+  content: url("../images/accordion-title--bottom-line.png");
+  position: absolute;
+  bottom: -6px;
+  left: 30px; }
+
+.ui-widget-content {
+  border: none; }
+
+.ui-state-default {
+  border: none;
+  background-color: #faf7fa; }
+
+.accordion .ui-accordion-header-collapsed {
+  border-radius: 8px; }
+
+.accordion .ui-accordion-header-active {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: white; }
+
+.faq .faq__inner .faq__content .accordion .accordion__title:first-child {
+  margin-top: 0; }
+
+.fancybox-caption__body {
+  display: none; }
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.96; }
+
+.fancybox-bg {
+  background: rgba(32, 4, 28, 0.8); }
+
+.fancybox-button {
+  background: rgba(255, 255, 255, 0.25); }
+
+.fancybox-can-zoomIn .fancybox-content {
+  cursor: default; }
 
 .staff-carousel .slick-prev:before {
   content: url("../images/carousel-prev-arrow.png");
@@ -410,7 +627,7 @@ body {
 
 .staff-carousel .slick-dots {
   position: relative;
-  top: 13px;
+  top: 30px;
   left: 555px;
   z-index: 1;
   width: 60px;
@@ -426,18 +643,26 @@ body {
   font-family: "NunitoRegular", sans-serif;
   color: rgba(114, 17, 99, 0.702); }
 
+.info__gallery .gallery-carousel .slick-list.draggable {
+  padding: 10px 50px !important; }
+
 .info__gallery .gallery-carousel .slick-slide {
   margin: 0 12px 48px 12px;
   text-align: center; }
+  .info__gallery .gallery-carousel .slick-slide:focus {
+    outline: none; }
 
 .info__gallery .gallery-carousel .slick-slide img {
   max-width: 100%; }
 
-.info__gallery .gallery-carousel .gallery-carousel__img.slick-slide {
-  opacity: 0.6; }
+.info__gallery .gallery-carousel .slick-slide .gallery-carousel__img {
+  opacity: 0.5; }
 
-.info__gallery .gallery-carousel .gallery-carousel__img.slick-slide.slick-active {
-  opacity: 1; }
+.info__gallery .gallery-carousel .slick-slide.slick-active .gallery-carousel__img {
+  opacity: 1;
+  transition: all 0.5s ease-in-out; }
+  .info__gallery .gallery-carousel .slick-slide.slick-active .gallery-carousel__img:hover {
+    transform: scale(1.05); }
 
 .info__gallery .gallery-carousel .slick-dots li button:before {
   width: 17px;
