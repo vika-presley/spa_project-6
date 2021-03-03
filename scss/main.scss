@@ -59,11 +59,11 @@ $btn-hover: rgb(223, 138, 210);
 
 
 .main {
-  background: no-repeat center url("../images/main-img.png");
+  background: no-repeat center url("../images/bg-images/main-bg.png");
   background-size: cover;
 
   .header {
-    background: url("../images/header-bg.png");
+    background: url("../images/bg-images/header-bg.png");
 
 
     .header__inner {
@@ -369,7 +369,7 @@ $btn-hover: rgb(223, 138, 210);
 }
 
 .promotion {
-  background: no-repeat center url("../images/promotion-bg.png");
+  background: no-repeat center url("../images/bg-images/promotion-bg.png");
   background-size: cover;
   overflow: hidden;
   z-index: 1;
@@ -396,7 +396,7 @@ $btn-hover: rgb(223, 138, 210);
       }
 
       &:before {
-        content: url("../images/promotion-big-circle.png");
+        content: url("../images/bg-images/promotion-big-circle.png");
         position: absolute;
         top: -175px;
         left: -315px;
@@ -421,7 +421,7 @@ $btn-hover: rgb(223, 138, 210);
       }
 
       &:before {
-        content: url("../images/promotion-small-circle.png");
+        content: url("../images/bg-images/promotion-small-circle.png");
         position: absolute;
         top: -240px;
         left: -380px;
@@ -632,13 +632,29 @@ $btn-hover: rgb(223, 138, 210);
 }
 
 .faq {
-  background: no-repeat center url("../images/faq-bg-img.png");
+  background: no-repeat center url("../images/bg-images/faq-bg-img.png");
   background-size: cover;
+  height: 900px;
 
   .faq__title {
     @include title();
     font-size: 30px;
     margin-bottom: 50px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: url("../images/bg-flowers/faq-title-left-top.png");
+      bottom: -183px;
+      left: -260px;
+    }
+
+    &:after {
+      position: absolute;
+      content: url("../images/bg-flowers/faq-title-left-bottom.png");
+      bottom: -575px;
+      left: -395px;
+    }
   }
 
   .faq__inner {
@@ -707,6 +723,14 @@ $btn-hover: rgb(223, 138, 210);
         box-shadow: 0 2px 9.2px 0.8px rgba(67, 6, 57, 0.12);
         padding: 30px 37px;
         box-sizing: border-box;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: url("../images/bg-flowers/faq-form.png");
+          bottom: 0;
+          right: 43px;
+        }
 
 
         .faq-form__text {
@@ -755,7 +779,7 @@ $btn-hover: rgb(223, 138, 210);
             margin-bottom: 15px;
           }
 
-          .faq-form__button{
+          .faq-form__button {
             @include btn();
             padding: 14px 90px;
             font-size: 16px;
@@ -766,6 +790,179 @@ $btn-hover: rgb(223, 138, 210);
 
     }
   }
+}
+
+.contacts {
+  overflow: hidden;
+
+  .contacts__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 0 200px 0;
+
+
+    .contacts__text {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 33px;
+
+      .contacts__title {
+        @include title();
+        font-size: 30px;
+        margin-bottom: 14px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: url("../images/bg-flowers/contacts-title-top-right.png");
+          bottom: 25px;
+          right: -857px;
+        }
+
+        &:after {
+          position: absolute;
+          content: url("../images/bg-flowers/contacts-title-left-bottom.png");
+          bottom: -565px;
+          left: -180px;
+        }
+      }
+
+      .contacts__content {
+        margin-top: 40px;
+
+        .contact__title {
+          font-size: 20px;
+          color: $text-color;
+          margin: 0 0 15px 0;
+        }
+
+        .contact__text {
+          margin: 0;
+          font-family: "NunitoRegular", sans-serif;
+        }
+
+        &:nth-child(3) {
+          margin-left: 100px;
+        }
+
+        &:nth-child(4) {
+          margin-left: 100px;
+        }
+      }
+
+
+    }
+
+    .contacts__map {
+      width: 790px;
+      height: 420px;
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: url("../images/bg-flowers/contacts-map-bottom-right.png");
+        bottom: -27px;
+        right: -122px;
+      }
+
+      &:after {
+        position: absolute;
+        content: url("../images/bg-flowers/contacts-map-top-right.png");
+        bottom: 160px;
+        right: -175px;
+      }
+    }
+  }
+
+}
+
+.footer {
+  background-color: rgb(250, 247, 250);
+
+  .footer__inner {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+      width: 217px;
+      align-items: center;
+      margin-right: 130px;
+
+      .socials__icon {
+        max-width: 34px;
+        height: 24px;
+        fill: $text-color;
+        transition: all 0.5s linear;
+
+        &:hover {
+          fill: rgb(114, 17, 99);
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+
+        &:first-child {
+          height: 50px;
+        }
+
+        &:last-child {
+          height: 50px;
+        }
+      }
+
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: 10px;
+      color: $main-color;
+      text-transform: uppercase;
+      width: 150px;
+      text-align: center;
+
+      .logo__c-name_style {
+        font-size: 55px;
+        font-family: "Marguaritas", serif;
+        color: $main-color;
+        text-transform: none;
+      }
+    }
+
+    .work-time {
+      font-size: 14px;
+      font-family: "NunitoRegular", sans-serif;
+      color: $text-color;
+    }
+
+    .phone {
+      font-size: 16px;
+      color: $text-color;
+    }
+
+  }
+
+}
+
+
+//скругление для yandex maps
+
+#map > ymaps {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+//стилизация цветовой палитры под макет сайта
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+
+  filter: hue-rotate(185deg);
+  -webkit-filter: hue-rotate(185deg);
 }
 
 

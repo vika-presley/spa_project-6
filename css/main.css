@@ -23,10 +23,10 @@ body {
   font-family: "NunitoSemiBold", sans-serif; }
 
 .main {
-  background: no-repeat center url("../images/main-img.png");
+  background: no-repeat center url("../images/bg-images/main-bg.png");
   background-size: cover; }
   .main .header {
-    background: url("../images/header-bg.png"); }
+    background: url("../images/bg-images/header-bg.png"); }
     .main .header .header__inner {
       display: flex;
       justify-content: space-between;
@@ -245,7 +245,7 @@ body {
     padding-bottom: 115px; }
 
 .promotion {
-  background: no-repeat center url("../images/promotion-bg.png");
+  background: no-repeat center url("../images/bg-images/promotion-bg.png");
   background-size: cover;
   overflow: hidden;
   z-index: 1; }
@@ -269,7 +269,7 @@ body {
         left: -280px;
         z-index: 10; }
       .promotion .promotion__inner .promotion__title:before {
-        content: url("../images/promotion-big-circle.png");
+        content: url("../images/bg-images/promotion-big-circle.png");
         position: absolute;
         top: -175px;
         left: -315px;
@@ -288,7 +288,7 @@ body {
         left: -348px;
         z-index: 10; }
       .promotion .promotion__inner .promotion__text:before {
-        content: url("../images/promotion-small-circle.png");
+        content: url("../images/bg-images/promotion-small-circle.png");
         position: absolute;
         top: -240px;
         left: -380px;
@@ -441,14 +441,26 @@ body {
         cursor: pointer; }
 
 .faq {
-  background: no-repeat center url("../images/faq-bg-img.png");
-  background-size: cover; }
+  background: no-repeat center url("../images/bg-images/faq-bg-img.png");
+  background-size: cover;
+  height: 900px; }
   .faq .faq__title {
     font-family: "NunitoBold", sans-serif;
     color: #430639;
     margin: 0;
     font-size: 30px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    position: relative; }
+    .faq .faq__title:before {
+      position: absolute;
+      content: url("../images/bg-flowers/faq-title-left-top.png");
+      bottom: -183px;
+      left: -260px; }
+    .faq .faq__title:after {
+      position: absolute;
+      content: url("../images/bg-flowers/faq-title-left-bottom.png");
+      bottom: -575px;
+      left: -395px; }
   .faq .faq__inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -493,7 +505,13 @@ body {
         background-color: #faf7fa;
         box-shadow: 0 2px 9.2px 0.8px rgba(67, 6, 57, 0.12);
         padding: 30px 37px;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        position: relative; }
+        .faq .faq__inner .faq__content .faq-form:before {
+          position: absolute;
+          content: url("../images/bg-flowers/faq-form.png");
+          bottom: 0;
+          right: 43px; }
         .faq .faq__inner .faq__content .faq-form .faq-form__text {
           font-size: 18px;
           font-family: "NunitoRegular", sans-serif;
@@ -540,6 +558,118 @@ body {
               cursor: pointer;
               background-color: #df8ad2; }
 
+.contacts {
+  overflow: hidden; }
+  .contacts .contacts__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 0 200px 0; }
+    .contacts .contacts__inner .contacts__text {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 33px; }
+      .contacts .contacts__inner .contacts__text .contacts__title {
+        font-family: "NunitoBold", sans-serif;
+        color: #430639;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 14px;
+        position: relative; }
+        .contacts .contacts__inner .contacts__text .contacts__title:before {
+          position: absolute;
+          content: url("../images/bg-flowers/contacts-title-top-right.png");
+          bottom: 25px;
+          right: -857px; }
+        .contacts .contacts__inner .contacts__text .contacts__title:after {
+          position: absolute;
+          content: url("../images/bg-flowers/contacts-title-left-bottom.png");
+          bottom: -565px;
+          left: -180px; }
+      .contacts .contacts__inner .contacts__text .contacts__content {
+        margin-top: 40px; }
+        .contacts .contacts__inner .contacts__text .contacts__content .contact__title {
+          font-size: 20px;
+          color: #2c0526;
+          margin: 0 0 15px 0; }
+        .contacts .contacts__inner .contacts__text .contacts__content .contact__text {
+          margin: 0;
+          font-family: "NunitoRegular", sans-serif; }
+        .contacts .contacts__inner .contacts__text .contacts__content:nth-child(3) {
+          margin-left: 100px; }
+        .contacts .contacts__inner .contacts__text .contacts__content:nth-child(4) {
+          margin-left: 100px; }
+    .contacts .contacts__inner .contacts__map {
+      width: 790px;
+      height: 420px;
+      display: inline-block;
+      position: relative; }
+      .contacts .contacts__inner .contacts__map:before {
+        position: absolute;
+        content: url("../images/bg-flowers/contacts-map-bottom-right.png");
+        bottom: -27px;
+        right: -122px; }
+      .contacts .contacts__inner .contacts__map:after {
+        position: absolute;
+        content: url("../images/bg-flowers/contacts-map-top-right.png");
+        bottom: 160px;
+        right: -175px; }
+
+.footer {
+  background-color: #faf7fa; }
+  .footer .footer__inner {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0; }
+    .footer .footer__inner .socials {
+      display: flex;
+      justify-content: space-between;
+      width: 217px;
+      align-items: center;
+      margin-right: 130px; }
+      .footer .footer__inner .socials .socials__icon {
+        max-width: 34px;
+        height: 24px;
+        fill: #2c0526;
+        transition: all 0.5s linear; }
+        .footer .footer__inner .socials .socials__icon:hover {
+          fill: #721163;
+          cursor: pointer;
+          transform: scale(1.2); }
+        .footer .footer__inner .socials .socials__icon:first-child {
+          height: 50px; }
+        .footer .footer__inner .socials .socials__icon:last-child {
+          height: 50px; }
+    .footer .footer__inner .logo {
+      text-decoration: none;
+      font-size: 10px;
+      color: #430639;
+      text-transform: uppercase;
+      width: 150px;
+      text-align: center; }
+      .footer .footer__inner .logo .logo__c-name_style {
+        font-size: 55px;
+        font-family: "Marguaritas", serif;
+        color: #430639;
+        text-transform: none; }
+    .footer .footer__inner .work-time {
+      font-size: 14px;
+      font-family: "NunitoRegular", sans-serif;
+      color: #2c0526; }
+    .footer .footer__inner .phone {
+      font-size: 16px;
+      color: #2c0526; }
+
+#map > ymaps {
+  border-radius: 8px;
+  overflow: hidden; }
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: hue-rotate(185deg);
+  -webkit-filter: hue-rotate(185deg); }
+
 .ui-state-active {
   background-color: white;
   border: none; }
@@ -574,7 +704,8 @@ body {
   content: url("../images/accordion-title--bottom-line.png");
   position: absolute;
   bottom: -6px;
-  left: 30px; }
+  left: 30px;
+  z-index: 2; }
 
 .ui-widget-content {
   border: none; }
@@ -674,9 +805,15 @@ body {
   text-align: center;
   opacity: .8;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 1s linear; }
 
 .info__gallery .gallery-carousel .slick-dots li.slick-active button:before {
   background-color: #721163; }
+
+.info__gallery .gallery-carousel ul.slick-dots li button:hover {
+  border: 2px solid #721163;
+  opacity: .5;
+  border-radius: 50px; }
 
 /*# sourceMappingURL=main.css.map */
