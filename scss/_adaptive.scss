@@ -1,0 +1,54 @@
+@mixin adaptive-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/*1201-1440*/
+
+@media screen and (max-width: 1439px) {
+
+  .main .header .header__inner {
+    @include adaptive-padding();
+  }
+
+  .main .main__titles {
+    @include adaptive-padding();
+  }
+
+
+  .about-us .about-us__features {
+    @include adaptive-padding();
+  }
+  .info__gallery .gallery-carousel .gallery-carousel__img {
+    width: 335px;
+    height: 270px;
+  }
+
+}
+
+
+/*1024-1200*/
+@media screen and (max-width: 1199px) {
+
+}
+
+/*768-1023*/
+@media screen and (max-width: 1023px) {
+
+}
+
+/*580-767*/
+@media screen and (max-width: 767px) {
+
+}
+
+/*480-579*/
+@media screen and (max-width: 579px) {
+
+}
+
+/*320-479*/
+@media screen and (max-width: 479px) {
+
+}

@@ -49,14 +49,14 @@ $btn-hover: rgb(223, 138, 210);
   font-size: 16px;
   color: rgb(255, 255, 255);
   outline: 0;
-  border-radius: 25px;
+  border-radius: 50px;
   border: 0;
+  transition: all 0.3s linear;
   &:hover {
     cursor: pointer;
     background-color: $btn-hover;
   }
 }
-
 
 .main {
   background: no-repeat center url("../images/bg-images/main-bg.png");
@@ -86,15 +86,12 @@ $btn-hover: rgb(223, 138, 210);
           color: $text-color;
           border-bottom: 1px solid transparent;
           padding-bottom: 4px;
+          transition: all 0.3s linear;
 
           &:hover {
+            transform: scale(1.1);
             @include menu-active;
           }
-
-        }
-
-        .menu__item_active {
-          @include menu-active();
         }
       }
 
@@ -159,7 +156,7 @@ $btn-hover: rgb(223, 138, 210);
     .titles__btn {
       @include btn();
       padding: 18px 36px;
-
+      text-decoration: none;
     }
 
   }
@@ -188,6 +185,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         top: -137px;
         left: -268px;
+        z-index: -1;
       }
 
       &:after {
@@ -195,6 +193,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         top: -60px;
         right: 0;
+        z-index: -1;
       }
 
     }
@@ -276,6 +275,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         bottom: -212px;
         left: -440px;
+        z-index: -1;
       }
 
       &:after {
@@ -283,6 +283,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         top: -35px;
         right: -90px;
+        z-index: -1;
       }
     }
 
@@ -303,6 +304,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         bottom: -40px;
         left: -155px;
+        z-index: -1;
       }
 
       &:after {
@@ -310,6 +312,7 @@ $btn-hover: rgb(223, 138, 210);
         position: absolute;
         bottom: -122px;
         right: -319px;
+        z-index: -1;
       }
 
       .service {
@@ -774,9 +777,16 @@ $btn-hover: rgb(223, 138, 210);
             }
           }
 
-          .faq-form__input {
-            padding: 14px 101px 14px 30px;
+          .faq-form__input-wrap {
             margin-bottom: 15px;
+
+            .faq-form__input {
+              padding: 14px 101px 14px 30px;
+            }
+
+            .faq-form__error {
+              margin: 5px 0 0 10px;
+            }
           }
 
           .faq-form__button {
@@ -969,6 +979,9 @@ $btn-hover: rgb(223, 138, 210);
 @import "accordion-custom";
 @import "fancybox-custom";
 @import "carousel-custom";
+@import "calendar-custom";
+@import "pop-up";
+@import "adaptive";
 
 
 

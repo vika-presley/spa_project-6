@@ -43,15 +43,13 @@ body {
           font-size: 13px;
           color: #2c0526;
           border-bottom: 1px solid transparent;
-          padding-bottom: 4px; }
+          padding-bottom: 4px;
+          transition: all 0.3s linear; }
           .main .header .header__inner .menu .menu__item:hover {
+            transform: scale(1.1);
             font-family: "NunitoExtraBold", sans-serif;
             color: #721163;
             border-bottom: 1px solid #721163; }
-        .main .header .header__inner .menu .menu__item_active {
-          font-family: "NunitoExtraBold", sans-serif;
-          color: #721163;
-          border-bottom: 1px solid #721163; }
       .main .header .header__inner .logo {
         text-decoration: none;
         font-size: 10px;
@@ -94,9 +92,11 @@ body {
       font-size: 16px;
       color: white;
       outline: 0;
-      border-radius: 25px;
+      border-radius: 50px;
       border: 0;
-      padding: 18px 36px; }
+      transition: all 0.3s linear;
+      padding: 18px 36px;
+      text-decoration: none; }
       .main .titles .titles__btn:hover {
         cursor: pointer;
         background-color: #df8ad2; }
@@ -120,12 +120,14 @@ body {
         content: url("../images/bg-flowers/our-features-title-left.png");
         position: absolute;
         top: -137px;
-        left: -268px; }
+        left: -268px;
+        z-index: -1; }
       .about-us .our-features .our-features__title:after {
         content: url("../images/bg-flowers/our-features-title-right.png");
         position: absolute;
         top: -60px;
-        right: 0; }
+        right: 0;
+        z-index: -1; }
     .about-us .our-features .features {
       display: flex;
       align-items: center;
@@ -176,12 +178,14 @@ body {
         content: url("../images/bg-flowers/our-services-title-left.png");
         position: absolute;
         bottom: -212px;
-        left: -440px; }
+        left: -440px;
+        z-index: -1; }
       .about-us .our-services .our-services__title:after {
         content: url("../images/bg-flowers/our-services-title-right.png");
         position: absolute;
         top: -35px;
-        right: -90px; }
+        right: -90px;
+        z-index: -1; }
     .about-us .our-services .our-services__text {
       margin: 31px 0 45px 0;
       width: 575px;
@@ -195,12 +199,14 @@ body {
         content: url("../images/bg-flowers/services-left.png");
         position: absolute;
         bottom: -40px;
-        left: -155px; }
+        left: -155px;
+        z-index: -1; }
       .about-us .our-services .services:after {
         content: url("../images/bg-flowers/services-right.png");
         position: absolute;
         bottom: -122px;
-        right: -319px; }
+        right: -319px;
+        z-index: -1; }
       .about-us .our-services .services .service {
         border-radius: 8px;
         background-color: #faf7fa;
@@ -233,8 +239,9 @@ body {
               font-size: 16px;
               color: white;
               outline: 0;
-              border-radius: 25px;
+              border-radius: 50px;
               border: 0;
+              transition: all 0.3s linear;
               height: 40px;
               padding: 0 23px; }
               .about-us .our-services .services .service .service__content .service__details .service__btn:hover {
@@ -298,8 +305,9 @@ body {
       font-size: 16px;
       color: white;
       outline: 0;
-      border-radius: 25px;
+      border-radius: 50px;
       border: 0;
+      transition: all 0.3s linear;
       padding: 17px 40px;
       z-index: 10;
       position: relative; }
@@ -542,16 +550,20 @@ body {
               font-size: 14px;
               color: #721163;
               font-family: "NunitoSemiBold", sans-serif; }
-          .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__input {
-            padding: 14px 101px 14px 30px;
+          .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__input-wrap {
             margin-bottom: 15px; }
+            .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__input-wrap .faq-form__input {
+              padding: 14px 101px 14px 30px; }
+            .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__input-wrap .faq-form__error {
+              margin: 5px 0 0 10px; }
           .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__button {
             background-color: #721163;
             font-size: 16px;
             color: white;
             outline: 0;
-            border-radius: 25px;
+            border-radius: 50px;
             border: 0;
+            transition: all 0.3s linear;
             padding: 14px 90px;
             font-size: 16px; }
             .faq .faq__inner .faq__content .faq-form .faq-form__form-content .faq-form__button:hover {
@@ -806,14 +818,269 @@ body {
   opacity: .8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 1s linear; }
+  transition: background-color 0.3s linear; }
+
+.info__gallery .gallery-carousel ul.slick-dots li button:hover:before {
+  background-color: #981c85;
+  opacity: 0.7; }
 
 .info__gallery .gallery-carousel .slick-dots li.slick-active button:before {
   background-color: #721163; }
 
-.info__gallery .gallery-carousel ul.slick-dots li button:hover {
-  border: 2px solid #721163;
-  opacity: .5;
-  border-radius: 50px; }
+.daterangepicker {
+  border-radius: 15px;
+  border: 1px solid #bfbabd; }
+  .daterangepicker th.month {
+    color: #721163;
+    font-family: "NunitoBold", sans-serif;
+    font-size: 15px; }
+  .daterangepicker .calendar-table .prev span {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    border: 0;
+    background-image: url("../images/pop-up/form-data-prev-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: unset;
+    -webkit-transform: unset; }
+  .daterangepicker .calendar-table .next span {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    border: 0;
+    background-image: url("../images/pop-up/form-data-next-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: unset;
+    -webkit-transform: unset; }
+  .daterangepicker th.available:hover {
+    background-color: rgba(156, 26, 135, 0.06); }
+  .daterangepicker .calendar-table table thead {
+    color: #721163;
+    font-family: "NunitoBold", sans-serif; }
+  .daterangepicker .calendar-table table tbody {
+    color: #2c0526;
+    font-family: "NunitoSemiBold", sans-serif; }
+  .daterangepicker td.active {
+    background-color: #721163;
+    border-color: transparent;
+    color: white;
+    transition: all 0.3s linear; }
+    .daterangepicker td.active:hover {
+      background-color: #df8ad2; }
+  .daterangepicker .calendar-table td {
+    border-radius: 50px; }
+  .daterangepicker td.start-date.end-date {
+    border-radius: 50px; }
+  .daterangepicker select.hourselect, .daterangepicker select.minuteselect {
+    background: rgba(223, 138, 210, 0.6);
+    border: none;
+    color: white;
+    padding: 2px;
+    outline: 0;
+    font-size: 12px;
+    font-family: "NunitoSemiBold", sans-serif;
+    border-radius: 15px; }
+  .daterangepicker .show-calendar .drp-buttons {
+    text-align: center; }
+  .daterangepicker .drp-buttons .btn {
+    background-color: #721163;
+    font-size: 16px;
+    color: white;
+    outline: 0;
+    border-radius: 50px;
+    border: 0;
+    transition: all 0.3s linear;
+    font-family: "NunitoRegular", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 6px 30px; }
+    .daterangepicker .drp-buttons .btn:hover {
+      cursor: pointer;
+      background-color: #df8ad2; }
+
+.hourselect option:nth-child(-n+9) {
+  display: none; }
+
+.hourselect option:nth-child(n+23) {
+  display: none; }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(102, 93, 98, 0.702);
+  display: none; }
+  .popup .popup__field {
+    position: relative; }
+    .popup .popup__field .popup__cancel-wrap {
+      position: absolute;
+      top: 0px;
+      right: -75px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #cec9cd;
+      transition: all 0.3s linear;
+      align-items: center;
+      display: flex;
+      justify-content: center; }
+      .popup .popup__field .popup__cancel-wrap:hover {
+        cursor: pointer;
+        background-color: #eae5e9; }
+    .popup .popup__field .popup__content {
+      max-width: 430px;
+      padding: 60px;
+      border-radius: 15px;
+      background-color: #faf7fa; }
+      .popup .popup__field .popup__content .reserve-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative; }
+        .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap {
+          margin: 12px 0; }
+          .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap:first-child {
+            margin-top: 0; }
+          .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap .reserve-form__input {
+            width: 305px;
+            box-sizing: border-box;
+            border-width: 1px;
+            border-color: #721163;
+            border-style: solid;
+            background-color: transparent;
+            padding: 13px 20px;
+            border-radius: 25px;
+            color: #2c0526;
+            font-size: 14px;
+            font-family: "NunitoRegular", sans-serif; }
+            .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap .reserve-form__input::placeholder {
+              font-size: 14px;
+              font-family: "NunitoRegular", sans-serif;
+              color: #2c0526; }
+            .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap .reserve-form__input:focus {
+              outline: none; }
+          .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap .reserve-form-select {
+            appearance: none;
+            background: no-repeat url("../images/pop-up/reserve-form-select-arrow.png");
+            background-position: 90% 50%; }
+          .popup .popup__field .popup__content .reserve-form .reserve-form__input-wrap .reserve-form__error {
+            margin: 5px 0 0 10px; }
+        .popup .popup__field .popup__content .reserve-form .reserve-form__btn {
+          background-color: #721163;
+          font-size: 16px;
+          color: white;
+          outline: 0;
+          border-radius: 50px;
+          border: 0;
+          transition: all 0.3s linear;
+          padding: 13px 57px;
+          margin-top: 48px; }
+          .popup .popup__field .popup__content .reserve-form .reserve-form__btn:hover {
+            cursor: pointer;
+            background-color: #df8ad2; }
+    .popup .popup__field .popup-sent {
+      max-width: 532px;
+      box-sizing: border-box;
+      border-radius: 15px;
+      text-align: center;
+      background-color: #faf7fa;
+      display: none; }
+      .popup .popup__field .popup-sent .popup-sent__title {
+        font-size: 20px;
+        font-family: "NunitoBold", sans-serif;
+        color: #721163;
+        margin: 0 0 20px 0; }
+      .popup .popup__field .popup-sent .popup-sent__text {
+        margin: 0;
+        font-size: 18px;
+        font-family: "NunitoRegular", sans-serif;
+        color: #2c0526; }
+    .popup .popup__field .popup__sent {
+      padding: 190px 120px; }
+
+.input-error {
+  font-size: 12px;
+  color: red;
+  display: none; }
+
+.faq-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(102, 93, 98, 0.702);
+  display: none; }
+  .faq-popup .faq-popup__field {
+    position: relative; }
+    .faq-popup .faq-popup__field .faq-popup__cancel-wrap {
+      position: absolute;
+      top: 0px;
+      right: -75px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #cec9cd;
+      transition: all 0.3s linear;
+      align-items: center;
+      display: flex;
+      justify-content: center; }
+      .faq-popup .faq-popup__field .faq-popup__cancel-wrap:hover {
+        cursor: pointer;
+        background-color: #eae5e9; }
+    .faq-popup .faq-popup__field .faq-popup-sent {
+      max-width: 532px;
+      box-sizing: border-box;
+      border-radius: 15px;
+      text-align: center;
+      background-color: #faf7fa; }
+      .faq-popup .faq-popup__field .faq-popup-sent .faq-popup-sent__title {
+        font-size: 20px;
+        font-family: "NunitoBold", sans-serif;
+        color: #721163;
+        margin: 0 0 20px 0; }
+      .faq-popup .faq-popup__field .faq-popup-sent .faq-popup-sent__text {
+        margin: 0;
+        font-size: 18px;
+        font-family: "NunitoRegular", sans-serif;
+        color: #2c0526; }
+    .faq-popup .faq-popup__field .faq-popup__sent {
+      padding: 190px 120px; }
+
+/*1201-1440*/
+@media screen and (max-width: 1439px) {
+  .main .header .header__inner {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .main .main__titles {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .about-us .about-us__features {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .info__gallery .gallery-carousel .gallery-carousel__img {
+    width: 335px;
+    height: 270px; } }
+
+/*1024-1200*/
+/*768-1023*/
+/*580-767*/
+/*480-579*/
+/*320-479*/
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,110 @@
+.daterangepicker {
+  border-radius: 15px;
+  border: 1px solid rgb(191, 186, 189);
+  //кастом шапки календаря (месяц)
+
+
+  th.month {
+    color: rgb(114, 17, 99);
+    font-family: "NunitoBold", sans-serif;
+    font-size: 15px;
+  }
+
+  //свои переключатели месяцев
+  .calendar-table .prev span {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    border: 0;
+    background-image: url("../images/pop-up/form-data-prev-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: unset;
+    -webkit-transform: unset;
+  }
+
+  .calendar-table .next span{
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    border: 0;
+    background-image: url("../images/pop-up/form-data-next-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: unset;
+    -webkit-transform: unset;
+  }
+
+  //бг при наведении на переключатель месяцв
+  th.available:hover {
+    background-color: rgba(156, 26, 135, 0.06);
+  }
+
+  //дни недели
+  .calendar-table table thead{
+    color: rgb(114, 17, 99);
+    font-family: "NunitoBold", sans-serif;
+  }
+  //числа календаря
+  .calendar-table table tbody{
+    color: $text-color;
+    font-family: "NunitoSemiBold", sans-serif;
+  }
+
+  //текущее число, оформление
+  td.active{
+    background-color: rgb(114, 17, 99);
+    border-color: transparent;
+    color: rgb(255,255,255);
+    transition: all 0.3s linear;
+    &:hover{
+      background-color:rgb(223, 138, 210);
+    }
+  }
+  //скругление фона чисел
+  .calendar-table td{
+    border-radius: 50px;
+  }
+
+  td.start-date.end-date{
+    border-radius: 50px;
+  }
+//кастом выбора времени
+  select.hourselect, select.minuteselect{
+    background: rgba(223, 138, 210, 0.6);
+    border: none;
+    color: rgb(255,255,255);
+    padding: 2px;
+    outline: 0;
+    font-size: 12px;
+    font-family: "NunitoSemiBold", sans-serif;
+    border-radius: 15px;
+  }
+//стили для кнопок внизу календаря
+  .show-calendar .drp-buttons{
+    text-align: center;
+  }
+
+  .drp-buttons .btn {
+    @include btn();
+    font-family: "NunitoRegular", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 6px 30px;
+  }
+
+}
+
+//ограничение количества option у select согласно рабочему времени салона
+
+.hourselect option:nth-child(-n+9) {
+  display: none;
+}
+
+.hourselect option:nth-child(n+23) {
+  display: none;
+}
