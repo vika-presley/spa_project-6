@@ -18,12 +18,33 @@
     <header class="header">
         <div class="header__inner">
 
-            <nav class="menu">
+            <nav class="menu" id="menu">
                 <a href="#services" class="menu__item">Услуги</a>
                 <a href="#staff" class="menu__item">Мастера</a>
                 <a href="#photo" class="menu__item">Галерея фото</a>
                 <a href="#faq" class="menu__item">FAQ</a>
             </nav>
+
+            <div class="menu-adaptive" id="burger">
+                <svg class="menu-adaptive__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<path d="M479.18,91.897H32.821C14.69,91.897,0,77.207,0,59.077s14.69-32.821,32.821-32.821H479.18
+		c18.13,0,32.82,14.69,32.82,32.821S497.31,91.897,479.18,91.897z"/>
+    <path d="M295.385,288.821H32.821C14.69,288.821,0,274.13,0,256s14.69-32.821,32.821-32.821h262.564
+		c18.13,0,32.821,14.69,32.821,32.821S313.515,288.821,295.385,288.821z"/>
+</g>
+                    <path d="M479.18,288.821h-52.513c-18.13,0-32.821-14.69-32.821-32.821s14.69-32.821,32.821-32.821h52.513
+	c18.13,0,32.82,14.69,32.82,32.821S497.31,288.821,479.18,288.821z"/>
+                    <path d="M479.18,485.744H32.821C14.69,485.744,0,471.053,0,452.923c0-18.13,14.69-32.821,32.821-32.821
+	H479.18c18.13,0,32.82,14.69,32.82,32.821C512,471.053,497.31,485.744,479.18,485.744z"/>
+                    <g>
+</g>
+</svg>
+            </div>
+
+
             <a href="index.html" class="logo header__logo">
                 <span class="logo__c-name_style">White Lotus</span>
                 Массажный салон
@@ -232,7 +253,7 @@
                     <p class="staff-carousel__exp">Стаж: 6 лет</p>
                 </div>
             </div>
-            <div class="staff-carousel__content">
+            <div class="staff-carousel__content" id="arrows-wrap">
                 <img class="staff-carousel__img" src="images/staff-carousel/staff-carousel-img2.png" alt="">
                 <div class="staff-carousel__text">
                     <h3 class="staff-carousel__title">Маргарита Линк</h3>
@@ -269,6 +290,9 @@
             </div>
 
         </div>
+        <div class="staff__dots">
+            <div class="staff__arrows"></div>
+        </div>
     </div>
     <div class="gallery info__gallery">
         <div class="gallery__inner">
@@ -279,54 +303,54 @@
             </p>
         </div>
         <div class="gallery-carousel">
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img2.png"
-               data-fancybox="gallery"
-               data-caption="Caption #1">
+            <a class="gallery-carousel__img-wrap" title="Image1"
+               href="images/gallery-carousel/gallery-carousel-img2.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img2.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img3.png"
-               data-fancybox="gallery"
-               data-caption="Caption #2">
+            <a class="gallery-carousel__img-wrap" title="Image2"
+               href="images/gallery-carousel/gallery-carousel-img3.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img3.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img4.png"
-               data-fancybox="gallery"
-               data-caption="Caption #3">
+            <a class="gallery-carousel__img-wrap" title="Image3"
+               href="images/gallery-carousel/gallery-carousel-img4.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img4.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img5.png"
-               data-fancybox="gallery"
-               data-caption="Caption #4">
+            <a class="gallery-carousel__img-wrap" title="Image4"
+               href="images/gallery-carousel/gallery-carousel-img5.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img5.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img6.png"
-               data-fancybox="gallery"
-               data-caption="Caption #5">
+            <a class="gallery-carousel__img-wrap" title="Image5"
+               href="images/gallery-carousel/gallery-carousel-img6.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img6.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img7.png"
-               data-fancybox="gallery"
-               data-caption="Caption #6">
+            <a class="gallery-carousel__img-wrap" title="Image6"
+               href="images/gallery-carousel/gallery-carousel-img7.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img7.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img8.png"
-               data-fancybox="gallery"
-               data-caption="Caption #7">
+            <a class="gallery-carousel__img-wrap" title="Image7"
+               href="images/gallery-carousel/gallery-carousel-img8.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img8.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img9.png"
-               data-fancybox="gallery"
-               data-caption="Caption #8">
+            <a class="gallery-carousel__img-wrap" title="Image8"
+               href="images/gallery-carousel/gallery-carousel-img9.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img9.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img10.png"
-               data-fancybox="gallery"
-               data-caption="Caption #9">
+            <a class="gallery-carousel__img-wrap" title="Image9"
+               href="images/gallery-carousel/gallery-carousel-img10.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img10.png" alt="">
             </a>
-            <a class="gallery-carousel__img-wrap" href="images/gallery-carousel/gallery-carousel-img1.png"
-               data-fancybox="gallery"
-               data-caption="Caption #10">
+            <a class="gallery-carousel__img-wrap" title="Image10"
+               href="images/gallery-carousel/gallery-carousel-img1.png"
+               rel="gallery1">
                 <img class="gallery-carousel__img" src="images/gallery-carousel/gallery-carousel-img1.png" alt="">
             </a>
 
@@ -427,8 +451,8 @@
                 </p>
                 <form class="faq-form__form-content" action="#" method="post">
                     <div class="faq-form__input-wrap">
-                    <input class="form-input faq-form__input" type="text" placeholder="Ваш номер телефона"
-                           data-mask="+375 (000) 000 00 00" name="callback-phone">
+                        <input class="form-input faq-form__input" type="text" placeholder="Ваш номер телефона"
+                               data-mask="+375 (000) 000 00 00" name="callback-phone">
                         <div class="input-error faq-form__error">Пожалуйста, укажите номер телефона</div>
                     </div>
                     <button class="faq-form__button" type="button">Позвонить мне</button>
@@ -438,7 +462,8 @@
                     <div class="faq-popup__field">
 
                         <div class="faq-popup__cancel-wrap" id="faq-close-bg">
-                            <img  class="faq-popup__cancel-image" id="faq-close-image" src="images/pop-up/form-cancel.png" alt="">
+                            <img class="faq-popup__cancel-image" id="faq-close-image"
+                                 src="images/pop-up/form-cancel.png" alt="">
                         </div>
                         <div class="faq-popup-sent faq-popup__sent">
                             <h3 class="faq-popup-sent__title">Спасибо!</h3>
@@ -459,7 +484,7 @@
         <div class="contacts__text">
             <h2 class="contacts__title">Контакты</h2>
 
-            <div class="contact contacts__content">
+            <div class="contact contacts__content contacts__contents_adresses">
                 <h3 class="contact__title">Адреса наших салонов:</h3>
                 <p class="contact__text">Минск, ул. Жасминовая, д. 3B</p>
                 <p class="contact__text">Минск, ул. Кирова, д. 5</p>
@@ -475,7 +500,9 @@
                 <p class="contact__text">+7 (981) 458-85-96</p>
             </div>
         </div>
-        <div class="contacts__map" id="map">
+        <div class="contacts__map-wrap">
+            <div class="contacts__map" id="map" style="width: 100%; height: 100%">
+            </div>
         </div>
     </div>
 </div>

@@ -19,3 +19,15 @@
 .fancybox-can-zoomIn .fancybox-content {
   cursor: default;
 }
+
+.fancybox-toolbar {
+  right: 395px;
+  top: 46px;
+}
+
+.fancybox-button{
+  border-radius: 25px;
+  position: fixed;
+  top: calc(50% - 147px);
+  right: calc(50% - 255px);
+}

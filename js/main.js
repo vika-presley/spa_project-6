@@ -10,7 +10,25 @@ $(document).ready(() => {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        focusOnSelect: true
+        appendArrows: $('.staff__dots'),
+        appendDots: $('.staff__dots'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            }
+        ]
 
     });
 
@@ -21,21 +39,39 @@ $(document).ready(() => {
         prevArrow: $('.gallery-arrows__prev'),
         nextArrow: $('.gallery-arrows__next'),
         slidesToShow: 3,
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 
     // настройка fancybox-галереи
 
-    $('[data-fancybox="gallery"]').fancybox({
-        infobar: false,
+    $('.gallery-carousel__img-wrap').fancybox({
+        openEffect: 'zoom',
+        closeEffect: 'fade',
         buttons: [
             "close"
-        ],
-        mouseWheel: false,
-        afterClose: function () {
-            $('.gallery-carousel').slick.refresh();
-        }
+        ]
     });
+
 
     // аккордион
 
@@ -63,7 +99,7 @@ $(document).ready(() => {
             float: 'none',
             position: {
                 right: 15,
-                top: 180
+                top: 100
             }
         });
 
@@ -176,6 +212,7 @@ $(document).ready(() => {
             dateInput.on('apply.daterangepicker', function (ev, picker) {
                 $(this).val(picker.startDate.format('DD/MM') + ' - ' + picker.endDate.format('HH:mm'));
             });
+
         });
 
     });
@@ -190,6 +227,8 @@ $(document).ready(() => {
         dateInput.blur();
 
     });
+
+
 
 
     // popup open
@@ -295,7 +334,7 @@ $(document).ready(() => {
             return;
         }
 
-        if(!sentError){
+        if (!sentError) {
             // $.ajax({
             //     method: 'POST',
             //     url: 'php/mail-to-callback.php',
@@ -328,6 +367,27 @@ $(document).ready(() => {
         $('#' + id).prop('selected', true);
         modal.css('display', 'flex');
 
+    });
+
+    // адаптив меню
+
+    var menu = $('.menu');
+    var headerBar = $('.header');
+
+    $('#burger').click(() => {
+        menu.toggleClass('show-menu');
+        headerBar.toggleClass('header-fixed');
+    });
+
+
+    $('.menu__item').click(() => {
+        menu.toggleClass('show-menu');
+        headerBar.removeClass('header-fixed');
+    });
+
+    $('.menu').click(() => {
+        menu.removeClass('show-menu');
+        headerBar.removeClass('header-fixed');
     });
 
 
