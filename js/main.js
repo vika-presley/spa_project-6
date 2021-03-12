@@ -261,7 +261,7 @@ $(document).ready(() => {
 
         let nameInput = $('input[name="name"]');
         let phoneInput = $('input[name="phone"]');
-        let serviceInput = $('select[name="service-name"]');
+        let serviceInput = $('select[name="serviceName"]');
         let hasErr = false;
 
         nameInput.css('border-color', 'rgb(114, 17, 99)');
@@ -302,7 +302,7 @@ $(document).ready(() => {
             // $.ajax({
             //     method: 'POST',
             //     url: 'php/mail-to-reserve.php',
-            //     data: 'name=' + nameInput.val() + '&phone=' + phoneInput.val() + '&service-name=' + serviceInput.val() + '&date=' + dateInput.val(),
+            //     data: 'name=' + nameInput.val() + '&phone=' + phoneInput.val() + '&serviceName=' + serviceInput.val() + '&date=' + dateInput.val(),
             //     success: () => {
             $('.popup__content').hide();
             $('.popup-sent').show();
@@ -338,7 +338,7 @@ $(document).ready(() => {
             // $.ajax({
             //     method: 'POST',
             //     url: 'php/mail-to-callback.php',
-            //     data: 'callback-phone=' + phoneInput.val(),
+            //     data: 'callbackPhone=' + phoneInput.val(),
             //     success: () => {
             faqPopup.css('display', 'flex');
             //     }, error: () => {

@@ -5,13 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name = $_POST['name'];
     $phone = $_POST['phone'];
-    $service = $_POST['service-name'];
+    $service = $_POST['serviceName'];
     $date = $_POST['date'];
 
     $content = $name . ' оставил(а) заявку на на оказание услуги ' . $service . ' Он(а) хочет посетить салон ' . $date . '. Контактный телефон: ' . $phone;
 
 
-    $success = mail("mail-to-reserve.php", 'Запись на спа-процедуры', $content);
+    $success = mail("admin@whitelotus.com", 'Запись на спа-процедуры', $content);
 
     if ($success) {
         http_response_code(200);

@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $callbackPhone = $_POST['callback-phone'];
+    $callbackPhone = $_POST['callbackPhone'];
 
     $content = ' Поступил запрос на обратный звонок. Необходимо перезвонить по номеру: ' . $callbackPhone;
 
-    $success = mail("callback-phone", 'Запрос на обратный звонок', $content);
+    $success = mail("callme@whitelotus.com", 'Запрос на обратный звонок', $content);
 
     if ($success) {
 

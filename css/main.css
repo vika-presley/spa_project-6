@@ -229,7 +229,7 @@ body {
             font-size: 14px;
             font-family: "NunitoRegular", sans-serif;
             color: #2c0526;
-            margin: 17px 0 42px 0;
+            margin: 17px 0 25px 0;
             height: 95px; }
           .about-us .our-services .services .service .service__content .service__time {
             font-size: 12px;
@@ -1250,7 +1250,7 @@ body {
   .about-us .our-features .features {
     justify-content: center; }
     .about-us .our-features .features .features__content {
-      margin: 0 62px 45px 0; }
+      margin: 0 30px 45px 30px; }
   .about-us .our-services .services {
     flex-wrap: wrap;
     justify-content: center; }
@@ -1317,23 +1317,33 @@ body {
   .main .main__titles {
     padding-top: 147px;
     padding-bottom: 200px; }
+  .about-us .our-features .our-features__title {
+    text-align: center; }
   .about-us .our-features .our-features__title:after {
     right: -45px; }
   .about-us .our-features .features:before {
     top: 171px;
     left: -44px; }
   .about-us .our-features .features .features__content {
-    margin: 0px 33px 45px 0; }
+    margin: 0 15px 45px 15px; }
     .about-us .our-features .features .features__content:nth-child(3) {
-      margin-left: unset;
-      margin-right: unset; }
+      margin-left: 15px;
+      margin-right: 15px; }
   .about-us .our-features .features .feature {
     max-width: 326px; }
     .about-us .our-features .features .feature .feature__text {
       font-size: 13px;
       margin: 9px 0 0 19px; }
+      .about-us .our-features .features .feature .feature__text br {
+        display: none; }
   .about-us .about-us__features {
     padding-bottom: 80px; }
+  .about-us .our-services .our-services__title {
+    text-align: center; }
+  .about-us .our-services .our-services__text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
   .about-us .our-services .services .service {
     width: 309px; }
     .about-us .our-services .services .service .service__img {
@@ -1355,16 +1365,28 @@ body {
     right: -40px; }
   .info .info__staff {
     padding-top: 100px; }
+    .info .info__staff .staff__title {
+      text-align: center; }
+    .info .info__staff .staff__text {
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto; }
     .info .info__staff .staff__title:after {
       top: -97px;
       right: -73px; }
   .info .info__gallery {
     padding-top: 60px;
     padding-bottom: 20px; }
+    .info .info__gallery .gallery__inner .gallery__title {
+      text-align: center; }
     .info .info__gallery .gallery__inner .gallery__title:after {
       display: none; }
     .info .info__gallery .gallery__inner .gallery__title:before {
       display: none; }
+    .info .info__gallery .gallery__inner .gallery__text {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto; }
     .info .info__gallery .slick-dots {
       bottom: 8px; }
     .info .info__gallery .gallery-arrows .gallery-arrows__prev {
@@ -1385,6 +1407,8 @@ body {
     margin: 0 auto; }
   .faq {
     height: 1160px; }
+    .faq .faq__inner .faq__title {
+      text-align: center; }
     .faq .faq__inner .faq__title:before {
       top: -77px;
       left: -48px; }
@@ -1561,6 +1585,8 @@ body {
       margin-right: 0;
       width: unset;
       position: relative; }
+      .contacts .contacts__inner .contacts__text .contacts__title {
+        text-align: center; }
       .contacts .contacts__inner .contacts__text .contacts__title:after {
         bottom: -792px; }
       .contacts .contacts__inner .contacts__text .contacts__content {
@@ -1772,12 +1798,15 @@ body {
       .main .titles .titles__text {
         text-align: left;
         margin: 103px auto 65px auto;
-        font-size: 15px; }
+        font-size: 15px;
+        text-align: center; }
+        .main .titles .titles__text br {
+          display: none; }
       .main .titles .titles__btn {
         margin-top: 70px; }
     .main .main__titles {
       padding-top: 45px;
-      padding-bottom: 139px; }
+      padding-bottom: 130px; }
   .about-us .our-features .our-features__title {
     font-size: 25px;
     text-align: center; }
